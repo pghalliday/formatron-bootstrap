@@ -4,11 +4,11 @@ formatron.bucket 'formatron'
 formatron.depends 'formatron-secrets'
 
 formatron.vpc 'vpc' do |vpc|
-  vpc.guid 'VPCCDQ8SD1'
+  vpc.guid 'vpcCDQ8SD1'
   vpc.cidr '10.0.0.0/16'
 
   vpc.subnet 'management' do |subnet|
-    subnet.guid 'SUBNETFSW2KGDO'
+    subnet.guid 'subnetFSW2KGDO'
     subnet.availability_zone 'a'
     subnet.cidr '10.0.0.0/24'
     subnet.acl do |acl|
@@ -18,7 +18,7 @@ formatron.vpc 'vpc' do |vpc|
     end
 
     subnet.bastion 'bastion' do |bastion|
-      bastion.guid 'BASTIONH003WKT6'
+      bastion.guid 'bastionH003WKT6'
       bastion.sub_domain config['bastion']['sub_domain']
       bastion.chef do |chef|
         chef.cookbook 'cookbooks/bastion_instance'
@@ -26,7 +26,7 @@ formatron.vpc 'vpc' do |vpc|
     end
 
     subnet.nat 'nat' do |nat|
-      nat.guid 'NATH5DGYHFN'
+      nat.guid 'natH5DGYHFN'
       nat.sub_domain config['nat']['sub_domain']
       nat.chef do |chef|
         chef.cookbook 'cookbooks/nat_instance'
@@ -34,7 +34,7 @@ formatron.vpc 'vpc' do |vpc|
     end
 
     subnet.chef_server 'chef_server' do |chef_server|
-      chef_server.guid 'CHEFQ4U9YL6D'
+      chef_server.guid 'chefQ4U9YL6D'
       chef_server.version '12.2.0-1'
       chef_server.sub_domain config['chef_server']['sub_domain']
       chef_server.cookbooks_bucket config['chef_server']['cookbooks_bucket']
@@ -57,13 +57,13 @@ formatron.vpc 'vpc' do |vpc|
   end
 
   vpc.subnet 'public' do |subnet|
-    subnet.guid 'SUBNET7XC8S5X1'
+    subnet.guid 'subnet7XC8S5X1'
     subnet.availability_zone 'a'
     subnet.cidr '10.0.1.0/24'
   end
 
   vpc.subnet 'private' do |subnet|
-    subnet.guid 'SUBNETZ12IOPL5'
+    subnet.guid 'subnetZ12IOPL5'
     subnet.availability_zone 'a'
     subnet.cidr '10.0.2.0/24'
     subnet.gateway 'nat'
