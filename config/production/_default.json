@@ -1,0 +1,12 @@
+{
+  "protected": true,
+  "bastion": {
+    "sub_domain": "bastion"
+  },
+  "nat": {
+    "sub_domain": "nat"
+  },
+  "chef_server": {
+    "cookbooks_bucket": "formatron-cookbooks"
+  }
+}

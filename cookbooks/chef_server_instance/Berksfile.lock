@@ -1,0 +1,7 @@
+DEPENDENCIES
+  chef_server_instance
+    path: .
+    metadata: true
+
+GRAPH
+  chef_server_instance (0.1.0)

@@ -1,0 +1,7 @@
+DEPENDENCIES
+  nat_instance
+    path: .
+    metadata: true
+
+GRAPH
+  nat_instance (0.1.0)

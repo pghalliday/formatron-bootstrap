@@ -1,0 +1,71 @@
+formatron.name 'formatron-bootstrap'
+formatron.bucket 'formatron'
+
+formatron.depends 'formatron-secrets'
+
+formatron.vpc 'vpc' do |vpc|
+  vpc.guid 'VPCCDQ8SD1'
+  vpc.cidr '10.0.0.0/16'
+
+  vpc.subnet 'management' do |subnet|
+    subnet.guid 'SUBNETFSW2KGDO'
+    subnet.availability_zone 'a'
+    subnet.cidr '10.0.0.0/24'
+    subnet.acl do |acl|
+      config['management_subnet']['source_cidrs'].each do |source_cidr|
+        acl.source_cidr source_cidr
+      end
+    end
+
+    subnet.bastion 'bastion' do |bastion|
+      bastion.guid 'BASTIONH003WKT6'
+      bastion.sub_domain config['bastion']['sub_domain']
+      bastion.chef do |chef|
+        chef.cookbook 'cookbooks/bastion_instance'
+      end
+    end
+
+    subnet.nat 'nat' do |nat|
+      nat.guid 'NATH5DGYHFN'
+      nat.sub_domain config['nat']['sub_domain']
+      nat.chef do |chef|
+        chef.cookbook 'cookbooks/nat_instance'
+      end
+    end
+
+    subnet.chef_server 'chef_server' do |chef_server|
+      chef_server.guid 'CHEFQ4U9YL6D'
+      chef_server.version '12.2.0-1'
+      chef_server.sub_domain config['chef_server']['sub_domain']
+      chef_server.cookbooks_bucket config['chef_server']['cookbooks_bucket']
+      chef_server.organization do |organization|
+        organization.short_name config['chef_server']['organization']['short_name']
+        organization.full_name config['chef_server']['organization']['full_name']
+      end
+      chef_server.username config['chef_server']['username']
+      chef_server.email config['chef_server']['email']
+      chef_server.first_name config['chef_server']['first_name']
+      chef_server.last_name config['chef_server']['last_name']
+      chef_server.password config['chef_server']['password']
+      chef_server.ssl_key config['chef_server']['ssl']['key']
+      chef_server.ssl_cert config['chef_server']['ssl']['cert']
+      chef_server.ssl_verify config['chef_server']['ssl']['verify']
+      chef_server.chef do |chef|
+        chef.cookbook 'cookbooks/chef_server_instance'
+      end
+    end
+  end
+
+  vpc.subnet 'public' do |subnet|
+    subnet.guid 'SUBNET7XC8S5X1'
+    subnet.availability_zone 'a'
+    subnet.cidr '10.0.1.0/24'
+  end
+
+  vpc.subnet 'private' do |subnet|
+    subnet.guid 'SUBNETZ12IOPL5'
+    subnet.availability_zone 'a'
+    subnet.cidr '10.0.2.0/24'
+    subnet.gateway 'nat'
+  end
+end

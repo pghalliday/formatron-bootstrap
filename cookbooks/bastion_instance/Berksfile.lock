@@ -1,0 +1,7 @@
+DEPENDENCIES
+  bastion_instance
+    path: .
+    metadata: true
+
+GRAPH
+  bastion_instance (0.1.0)
