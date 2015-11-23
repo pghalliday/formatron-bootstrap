@@ -2,6 +2,11 @@ DEPENDENCIES
   chef_server_instance
     path: .
     metadata: true
+  formatron_filebeat
+    git: https://github.com/formatron/filebeat-cookbook.git
+    revision: e55b690b98e22a9dc7e16096895d6fc7fcd7f860
 
 GRAPH
-  chef_server_instance (0.1.0)
+  chef_server_instance (0.1.2)
+    formatron_filebeat (>= 0.0.0)
+  formatron_filebeat (0.1.0)
