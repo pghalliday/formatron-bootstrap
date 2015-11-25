@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 # Evaluate free system memory from Linux based systems.
