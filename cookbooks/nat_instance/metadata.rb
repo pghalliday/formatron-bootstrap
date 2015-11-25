@@ -1,4 +1,5 @@
 name 'nat_instance'
-version '0.1.2'
+version '0.1.3'
 supports 'ubuntu'
 depends 'formatron_filebeat'
+depends 'formatron_sensu'

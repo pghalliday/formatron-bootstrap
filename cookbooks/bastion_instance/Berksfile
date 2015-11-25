@@ -3,3 +3,4 @@ source 'https://supermarket.chef.io'
 metadata
 
 cookbook 'formatron_filebeat', git: 'https://github.com/formatron/filebeat-cookbook.git'
+cookbook 'formatron_sensu', git: 'https://github.com/formatron/sensu-cookbook.git'
