@@ -1,5 +1,7 @@
 name 'bastion_instance'
-version '0.1.3'
+version '0.1.6'
 supports 'ubuntu'
+depends 'apt'
+depends 'build-essential'
 depends 'formatron_filebeat'
 depends 'formatron_sensu'
