@@ -1,0 +1,5 @@
+{
+  "sensu-plugins-cpu-checks": {
+    "version": "0.0.4"
+  }
+}

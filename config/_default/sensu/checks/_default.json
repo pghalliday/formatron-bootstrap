@@ -1,0 +1,18 @@
+{
+  "cpu": {
+    "gem": "sensu-plugins-cpu-checks",
+    "attributes": {
+      "type": "metric",
+      "output_type": "graphite",
+      "auto_tag_host": true,
+      "command": "metrics-cpu.rb",
+      "interval": 10,
+      "subscribers": [
+        "default"
+      ],
+      "handlers": [
+        "relay"
+      ]
+    }
+  }
+}
