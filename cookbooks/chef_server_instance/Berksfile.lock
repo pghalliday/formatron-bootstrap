@@ -7,7 +7,7 @@ DEPENDENCIES
     revision: e55b690b98e22a9dc7e16096895d6fc7fcd7f860
   formatron_sensu
     git: https://github.com/formatron/sensu-cookbook.git
-    revision: d232aa880b14ab1b0599708a0315f5ac0df096d9
+    revision: a73e0a9c1561491aa6dcfa11c9932b28f9ef7c1f
 
 GRAPH
   apt (2.9.2)

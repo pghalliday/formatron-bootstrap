@@ -1,0 +1,10 @@
+{
+  "gem": "sensu-plugins-cpu-checks",
+  "attributes": {
+    "command": "check-cpu.rb",
+    "interval": 10,
+    "subscribers": [
+      "default"
+    ]
+  }
+}
