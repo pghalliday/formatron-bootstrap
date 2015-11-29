@@ -4,7 +4,7 @@
     "type": "metric",
     "output_type": "graphite",
     "auto_tag_host": true,
-    "command": "metrics-cpu-pcnt-usage.rb",
+    "command": "metrics-user-pct-usage.rb",
     "interval": 10,
     "subscribers": [
       "default"
