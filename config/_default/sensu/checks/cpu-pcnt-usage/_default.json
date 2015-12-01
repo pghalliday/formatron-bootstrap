@@ -10,7 +10,8 @@
       "default"
     ],
     "handlers": [
-      "relay"
+      "relay",
+      "elasticsearch"
     ]
   }
 }
