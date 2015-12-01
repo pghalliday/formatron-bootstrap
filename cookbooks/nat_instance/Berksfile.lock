@@ -1,10 +1,13 @@
 DEPENDENCIES
+  formatron_common
+    git: https://github.com/formatron/common-cookbook.git
+    revision: 5a3402ac470b9ce2eec51917992bcefbe2b508d1
   formatron_filebeat
     git: https://github.com/formatron/filebeat-cookbook.git
     revision: e55b690b98e22a9dc7e16096895d6fc7fcd7f860
   formatron_sensu
     git: https://github.com/formatron/sensu-cookbook.git
-    revision: d232aa880b14ab1b0599708a0315f5ac0df096d9
+    revision: a73e0a9c1561491aa6dcfa11c9932b28f9ef7c1f
   nat_instance
     path: .
     metadata: true
@@ -12,11 +15,13 @@ DEPENDENCIES
 GRAPH
   apt (2.9.2)
   build-essential (2.2.4)
-  formatron_filebeat (0.1.0)
-  formatron_sensu (0.1.0)
-    apt (>= 0.0.0)
-  nat_instance (0.1.6)
+  formatron_common (0.1.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     formatron_filebeat (>= 0.0.0)
     formatron_sensu (>= 0.0.0)
+  formatron_filebeat (0.1.0)
+  formatron_sensu (0.1.0)
+    apt (>= 0.0.0)
+  nat_instance (0.1.7)
+    formatron_common (>= 0.0.0)
