@@ -7,7 +7,7 @@
       "default"
     ],
     "handlers": [
-      "elasticsearch"
+      "elasticsearch_handler"
     ]
   }
 }

@@ -11,7 +11,7 @@
     ],
     "handlers": [
       "relay",
-      "elasticsearch"
+      "elasticsearch_metrics"
     ]
   }
 }
