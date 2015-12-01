@@ -4,7 +4,7 @@ DEPENDENCIES
     metadata: true
   formatron_common
     git: https://github.com/formatron/common-cookbook.git
-    revision: 5a3402ac470b9ce2eec51917992bcefbe2b508d1
+    revision: f1a0ad2d9419bfcf8bfd8eff5d5a2e5bc4ca91fc
   formatron_filebeat
     git: https://github.com/formatron/filebeat-cookbook.git
     revision: e55b690b98e22a9dc7e16096895d6fc7fcd7f860
