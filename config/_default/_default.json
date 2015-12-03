@@ -19,10 +19,10 @@
     "email_attr": "mail",
     "port": 4000
   },
-  "elk": {
+  "uchiwa": {
     "port": 80
   },
-  "sensu": {
+  "kibana": {
     "port": 80
   },
   "graphite": {

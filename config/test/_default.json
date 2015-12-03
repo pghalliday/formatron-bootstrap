@@ -9,14 +9,20 @@
     "cookbooks_bucket": "formatron-cookbooks-test",
     "sub_domain": "chef-test"
   },
-  "elk": {
-    "sub_domain": "elk-test"
-  },
   "ldap": {
     "sub_domain": "ldap-test"
   },
-  "sensu": {
-    "sub_domain": "sensu-test"
+  "monitor": {
+    "sub_domain": "monitor-test"
+  },
+  "uchiwa": {
+    "sub_domain": "uchiwa-test"
+  },
+  "kibana": {
+    "sub_domain": "kibana-test"
+  },
+  "logstash": {
+    "sub_domain": "logstash-test"
   },
   "graphite": {
     "sub_domain": "graphite-test"

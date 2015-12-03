@@ -9,14 +9,20 @@
     "cookbooks_bucket": "formatron-cookbooks",
     "sub_domain": "chef"
   },
-  "elk": {
-    "sub_domain": "elk"
-  },
   "ldap": {
     "sub_domain": "ldap"
   },
-  "sensu": {
-    "sub_domain": "sensu"
+  "monitor": {
+    "sub_domain": "monitor"
+  },
+  "uchiwa": {
+    "sub_domain": "uchiwa"
+  },
+  "kibana": {
+    "sub_domain": "kibana"
+  },
+  "logstash": {
+    "sub_domain": "logstash"
   },
   "graphite": {
     "sub_domain": "graphite"
