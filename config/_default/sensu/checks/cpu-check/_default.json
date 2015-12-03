@@ -6,9 +6,6 @@
     "interval": 10,
     "subscribers": [
       "default"
-    ],
-    "handlers": [
-      "elasticsearch_handler"
     ]
   }
 }

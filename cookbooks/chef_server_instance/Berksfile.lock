@@ -32,7 +32,7 @@ GRAPH
     logrotate (>= 1.2.0)
     windows (~> 1.37)
   chef_handler (1.2.0)
-  chef_server_instance (0.1.0)
+  chef_server_instance (0.1.1)
     formatron_common (>= 0.0.0)
   cron (1.7.0)
   formatron_beats (0.1.0)

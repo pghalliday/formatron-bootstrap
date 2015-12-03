@@ -26,7 +26,7 @@ DEPENDENCIES
 
 GRAPH
   apt (2.9.2)
-  bastion_instance (0.1.0)
+  bastion_instance (0.1.1)
     formatron_common (>= 0.0.0)
   build-essential (2.2.4)
   chef-client (4.3.2)
