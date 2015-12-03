@@ -1,8 +1,23 @@
 {
   "chef_server": {
+    "organization": {
+      "short_name": "formatron",
+      "full_name": "Formatron"
+    },
     "ssl": {
       "verify": false
     }
+  },
+  "ldap": {
+    "auth_name": "Crowd login",
+    "uid": "uid",
+    "search_base": "ou=helios",
+    "dn_suffix": "o=formatron",
+    "first_name_attr": "givenName",
+    "last_name_attr": "sn",
+    "member_of_attr": "memberOf",
+    "email_attr": "mail",
+    "port": 4000
   },
   "elk": {
     "port": 80
@@ -11,6 +26,7 @@
     "port": 80
   },
   "graphite": {
+    "timezone": "Europe/Amsterdam",
     "port": 80,
     "carbon_port": 2003
   },
