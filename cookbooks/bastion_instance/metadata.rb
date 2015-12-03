@@ -1,4 +1,4 @@
 name 'bastion_instance'
-version '0.1.7'
+version '0.1.0'
 supports 'ubuntu'
 depends 'formatron_common'
