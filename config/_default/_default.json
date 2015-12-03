@@ -1,2 +1,23 @@
 {
+  "chef_server": {
+    "ssl": {
+      "verify": false
+    }
+  },
+  "elk": {
+    "port": 80
+  },
+  "sensu": {
+    "port": 80
+  },
+  "graphite": {
+    "port": 80,
+    "carbon_port": 2003
+  },
+  "grafana": {
+    "port": 3000
+  },
+  "logstash": {
+    "beats_port": 5044
+  }
 }

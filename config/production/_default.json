@@ -1,5 +1,4 @@
 {
-  "protected": true,
   "bastion": {
     "sub_domain": "bastion"
   },
@@ -7,6 +6,22 @@
     "sub_domain": "nat"
   },
   "chef_server": {
-    "cookbooks_bucket": "formatron-cookbooks"
+    "cookbooks_bucket": "formatron-cookbooks",
+    "sub_domain": "chef"
+  },
+  "elk": {
+    "sub_domain": "elk"
+  },
+  "ldap": {
+    "sub_domain": "ldap"
+  },
+  "sensu": {
+    "sub_domain": "sensu"
+  },
+  "graphite": {
+    "sub_domain": "graphite"
+  },
+  "grafana": {
+    "sub_domain": "grafana"
   }
 }
