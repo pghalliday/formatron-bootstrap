@@ -24,6 +24,9 @@
   "logstash": {
     "sub_domain": "logstash"
   },
+  "sensu": {
+    "sub_domain": "sensu"
+  },
   "graphite": {
     "sub_domain": "graphite"
   },
