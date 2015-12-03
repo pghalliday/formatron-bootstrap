@@ -1,6 +1,7 @@
 {
   "gem": "sensu-plugins-cpu-checks",
   "attributes": {
+    "standalone": true,
     "command": "check-cpu.rb",
     "interval": 10,
     "subscribers": [

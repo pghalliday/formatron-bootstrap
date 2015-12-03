@@ -1,6 +1,7 @@
 {
   "gem": "sensu-plugins-cpu-checks",
   "attributes": {
+    "standalone": true,
     "type": "metric",
     "output_type": "graphite",
     "auto_tag_host": true,
