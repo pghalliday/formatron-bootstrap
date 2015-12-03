@@ -12,9 +12,6 @@
   "ldap": {
     "sub_domain": "ldap"
   },
-  "monitor": {
-    "sub_domain": "monitor"
-  },
   "uchiwa": {
     "sub_domain": "uchiwa"
   },
