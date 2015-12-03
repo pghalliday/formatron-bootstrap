@@ -20,18 +20,18 @@
     "port": 4000
   },
   "uchiwa": {
-    "port": 80
+    "web_port": 80
   },
   "kibana": {
-    "port": 80
+    "web_port": 80
   },
   "graphite": {
     "timezone": "Europe/Amsterdam",
-    "port": 80,
+    "web_port": 80,
     "carbon_port": 2003
   },
   "grafana": {
-    "port": 3000
+    "web_port": 3000
   },
   "logstash": {
     "beats_port": 5044
