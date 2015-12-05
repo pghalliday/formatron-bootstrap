@@ -1,5 +1,8 @@
 {
   "sensu-plugins-cpu-checks": {
     "version": "0.0.4"
+  },
+  "sensu-plugins-disk-checks": {
+    "version": "1.0.3"
   }
 }

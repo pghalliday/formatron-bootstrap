@@ -1,0 +1,11 @@
+{
+  "gem": "sensu-plugins-disk-checks",
+  "attributes": {
+    "standalone": true,
+    "command": "check-disk-usage.rb",
+    "interval": 10,
+    "subscribers": [
+      "default"
+    ]
+  }
+}
