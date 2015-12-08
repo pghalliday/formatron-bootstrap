@@ -13,7 +13,7 @@ DEPENDENCIES
     revision: 32e60e4406519bf0900eae60b8d61127e3344d61
   formatron_filebeat
     git: https://github.com/formatron/filebeat-cookbook.git
-    revision: f5fccbde74ddced3fa9e923d4ccd1590aaf4c6a3
+    revision: 91c983d7278fda4c31aba9b56a72fc1f4c519b1a
   formatron_packetbeat
     git: https://github.com/formatron/packetbeat-cookbook.git
     revision: 27b36aa41c691cadf99e677bcb302e9c034f9002
