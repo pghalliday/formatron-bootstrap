@@ -1,4 +1,4 @@
 name 'chef_server_instance'
-version '0.1.1'
+version '0.1.2'
 supports 'ubuntu'
-depends 'formatron_common'
+depends 'formatron_chef_extra'

@@ -5,6 +5,9 @@ DEPENDENCIES
   formatron_beats
     git: https://github.com/formatron/beats-cookbook.git
     revision: 5c25e099b3dda171cd8fbd68abe79568d83d4629
+  formatron_chef_extra
+    git: https://github.com/formatron/chef-extra-cookbook.git
+    revision: 71e9da8810587d239296c08c015d4f6916b6bae0
   formatron_common
     git: https://github.com/formatron/common-cookbook.git
     revision: 0d7fba129b058fced9b6a53fe27f7885f484f0eb
@@ -32,12 +35,14 @@ GRAPH
     logrotate (>= 1.2.0)
     windows (~> 1.37)
   chef_handler (1.2.0)
-  chef_server_instance (0.1.1)
-    formatron_common (>= 0.0.0)
+  chef_server_instance (0.1.2)
+    formatron_chef_extra (>= 0.0.0)
   cron (1.7.0)
   formatron_beats (0.1.0)
     apt (>= 0.0.0)
     formatron_elasticsearch (>= 0.0.0)
+  formatron_chef_extra (0.1.0)
+    formatron_common (>= 0.0.0)
   formatron_common (0.1.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
