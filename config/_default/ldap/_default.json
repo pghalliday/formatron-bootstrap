@@ -1,0 +1,11 @@
+{
+  "auth_name": "Crowd login",
+  "uid": "uid",
+  "search_base": "ou=helios",
+  "dn_suffix": "o=formatron",
+  "first_name_attr": "givenName",
+  "last_name_attr": "sn",
+  "member_of_attr": "memberOf",
+  "email_attr": "mail",
+  "port": 4000
+}

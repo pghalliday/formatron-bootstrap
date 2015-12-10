@@ -3,6 +3,8 @@ formatron.bucket 'formatron'
 
 formatron.depends 'formatron-secrets'
 
+secrets = config['secrets']
+
 formatron.vpc 'vpc' do |vpc|
   vpc.guid 'vpcCDQ8SD1'
   vpc.cidr '10.0.0.0/16'
@@ -12,7 +14,7 @@ formatron.vpc 'vpc' do |vpc|
     subnet.availability_zone 'a'
     subnet.cidr '10.0.0.0/24'
     subnet.acl do |acl|
-      config['management_subnet']['source_cidrs'].each do |source_cidr|
+      secrets['management_subnet']['source_cidrs'].each do |source_cidr|
         acl.source_cidr source_cidr
       end
     end
@@ -42,13 +44,13 @@ formatron.vpc 'vpc' do |vpc|
         organization.short_name config['chef_server']['organization']['short_name']
         organization.full_name config['chef_server']['organization']['full_name']
       end
-      chef_server.username config['chef_server']['username']
-      chef_server.email config['chef_server']['email']
-      chef_server.first_name config['chef_server']['first_name']
-      chef_server.last_name config['chef_server']['last_name']
-      chef_server.password config['chef_server']['password']
-      chef_server.ssl_key config['chef_server']['ssl']['key']
-      chef_server.ssl_cert config['chef_server']['ssl']['cert']
+      chef_server.username secrets['chef_server']['username']
+      chef_server.email secrets['chef_server']['email']
+      chef_server.first_name secrets['chef_server']['first_name']
+      chef_server.last_name secrets['chef_server']['last_name']
+      chef_server.password secrets['chef_server']['password']
+      chef_server.ssl_key secrets['chef_server']['ssl']['key']
+      chef_server.ssl_cert secrets['chef_server']['ssl']['cert']
       chef_server.ssl_verify config['chef_server']['ssl']['verify']
       chef_server.chef do |chef|
         chef.cookbook 'cookbooks/chef_server_instance'

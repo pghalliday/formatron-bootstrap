@@ -1,0 +1,9 @@
+{
+  "organization": {
+    "short_name": "formatron",
+    "full_name": "Formatron"
+  },
+  "ssl": {
+    "verify": false
+  }
+}
