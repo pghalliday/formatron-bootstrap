@@ -1,0 +1,11 @@
+{
+  "sensu_subscriptions": [
+    "default"
+  ],
+  "proxies": [
+    "kibana",
+    "uchiwa",
+    "graphite",
+    "grafana"
+  ]
+}

@@ -12,6 +12,12 @@
   "ldap": {
     "sub_domain": "ldap"
   },
+  "management_reverse_proxy": {
+    "sub_domain": "mrp"
+  },
+  "monitor": {
+    "sub_domain": "monitor"
+  },
   "uchiwa": {
     "sub_domain": "uchiwa"
   },

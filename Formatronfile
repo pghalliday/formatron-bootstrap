@@ -13,6 +13,7 @@ formatron.vpc 'vpc' do |vpc|
     subnet.guid 'subnetFSW2KGDO'
     subnet.availability_zone 'a'
     subnet.cidr '10.0.0.0/24'
+
     subnet.acl do |acl|
       secrets['management_subnet']['source_cidrs'].each do |source_cidr|
         acl.source_cidr source_cidr
@@ -56,6 +57,22 @@ formatron.vpc 'vpc' do |vpc|
         chef.cookbook 'cookbooks/chef_server_instance'
       end
     end
+
+    subnet.instance 'management_reverse_proxy' do |instance|
+      instance.guid 'instance7DMRA54B'
+      instance.sub_domain config['management_reverse_proxy']['sub_domain']
+      instance.public_alias config['kibana']['sub_domain']
+      instance.public_alias config['uchiwa']['sub_domain']
+      instance.public_alias config['graphite']['sub_domain']
+      instance.public_alias config['grafana']['sub_domain']
+      instance.security_group do |security_group|
+        security_group.open_tcp_port 80
+        security_group.open_tcp_port 443
+      end
+      instance.chef do |chef|
+        chef.cookbook 'cookbooks/management_reverse_proxy_instance'
+      end
+    end
   end
 
   vpc.subnet 'public' do |subnet|
@@ -69,5 +86,33 @@ formatron.vpc 'vpc' do |vpc|
     subnet.availability_zone 'a'
     subnet.cidr '10.0.2.0/24'
     subnet.gateway 'nat'
+
+    subnet.instance 'ldap' do |instance|
+      instance.guid 'instanceDBBFJUM'
+      instance.sub_domain config['ldap']['sub_domain']
+      instance.chef do |chef|
+        chef.cookbook 'cookbooks/ldap_instance'
+      end
+    end
+
+    subnet.instance 'monitor' do |instance|
+      instance.guid 'instanceS7TPNZJC'
+      instance.instance_type 't2.medium'
+      instance.sub_domain config['monitor']['sub_domain']
+      instance.private_alias config['kibana']['sub_domain']
+      instance.private_alias config['graphite']['sub_domain']
+      instance.private_alias config['grafana']['sub_domain']
+      instance.private_alias config['uchiwa']['sub_domain']
+      instance.private_alias config['logstash']['sub_domain']
+      instance.private_alias config['sensu']['sub_domain']
+      instance.block_device do |block_device|
+        block_device.device '/dev/sda1'
+        block_device.size 100
+        block_device.type 'gp2'
+      end
+      instance.chef do |chef|
+        chef.cookbook 'cookbooks/monitor_instance'
+      end
+    end
   end
 end

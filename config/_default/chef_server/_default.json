@@ -1,4 +1,7 @@
 {
+  "sensu_subscriptions": [
+    "default"
+  ],
   "organization": {
     "short_name": "formatron",
     "full_name": "Formatron"

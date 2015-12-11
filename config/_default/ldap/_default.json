@@ -1,4 +1,7 @@
 {
+  "sensu_subscriptions": [
+    "default"
+  ],
   "auth_name": "Crowd login",
   "uid": "uid",
   "search_base": "ou=helios",

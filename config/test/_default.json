@@ -12,6 +12,12 @@
   "ldap": {
     "sub_domain": "ldap-test"
   },
+  "management_reverse_proxy": {
+    "sub_domain": "mrp-test"
+  },
+  "monitor": {
+    "sub_domain": "monitor-test"
+  },
   "uchiwa": {
     "sub_domain": "uchiwa-test"
   },

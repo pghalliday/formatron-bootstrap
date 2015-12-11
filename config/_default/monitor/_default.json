@@ -1,0 +1,13 @@
+{
+  "sensu_subscriptions": [
+    "default"
+  ],
+  "grafana_instance_dashboards": [
+    "nat",
+    "bastion",
+    "chef_server",
+    "monitor",
+    "management_reverse_proxy",
+    "ldap"
+  ]
+}

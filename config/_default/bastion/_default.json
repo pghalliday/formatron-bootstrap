@@ -1,0 +1,5 @@
+{
+  "sensu_subscriptions": [
+    "default"
+  ]
+}
